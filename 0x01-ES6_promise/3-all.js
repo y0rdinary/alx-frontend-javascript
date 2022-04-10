@@ -1,6 +1,6 @@
 import { uploadPhoto, createUser } from './utils';
 
-export default function handleProfileSignup(){
+export default function handleProfileSignup() {
   let firstName;
   let lastName;
   let body;
@@ -9,11 +9,11 @@ export default function handleProfileSignup(){
   const u = createUser();
 
   return Promise.all([p, u]).them((data) => {
-      body = data[0].body;
-      firstName = data[1].firstName;
-      lastName = data[1].lastName;
-      console.log(`${body} ${firstName} ${lastName}`);
+    body = data[0].body;
+    firstName = data[1].firstName;
+    lastName = data[1].lastName;
+    console.log(`${body} ${firstName} ${lastName}`);
   }).catch(() => {
-      console.log('Signp system offline');
+    console.log('Signp system offline');
   });
 }
