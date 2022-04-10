@@ -9,7 +9,7 @@ export default class Car {
     return this;
   }
 
-cloneCar() {
+  cloneCar() {
     return new this.constructor[Symbol.species]();
   }
 }
