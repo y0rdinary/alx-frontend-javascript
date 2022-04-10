@@ -3,7 +3,7 @@ export default function createReportObject(employeesList) {
     allEmployees: {
       ...employeesList,
     },
-    getNumberOfDepartments(empList){
+    getNumberOfDepartments(empList) {
       return Object.keys(empList).length;
     },
   };
