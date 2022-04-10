@@ -8,12 +8,12 @@ export default function handleProfileSignup() {
   const p = uploadPhoto();
   const u = createUser();
 
-  return Promise.all([p, u]).them((data) => {
+  return Promise.all([p, u]).then((data) => {
     body = data[0].body;
     firstName = data[1].firstName;
     lastName = data[1].lastName;
     console.log(`${body} ${firstName} ${lastName}`);
   }).catch(() => {
-    console.log('Signp system offline');
+    console.log('Signup system offline');
   });
 }
