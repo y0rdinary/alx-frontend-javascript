@@ -5,10 +5,10 @@ export default function cleanSet(set, startString) {
   if (startString && typeof startString === 'string') {
     for (const element of set) {
       if (element && element.startsWith(startString)) {
-        array.push(element.slice(startString.length));
-      }
+      array.push(element.slice(startString.length));
     }
-  text = array.join('-');
   }
+text = array.join('-');
+}
 return text;
 }
